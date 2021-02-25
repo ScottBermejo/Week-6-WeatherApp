@@ -1,0 +1,42 @@
+body {
+    background-image: url("https://www.teahub.io/photos/full/288-2883620_thunderstorm-clouds.jpg");
+    background-color: #cccccc;
+    background-repeat:no-repeat;
+
+    background-size:cover;
+   }
+
+.weatherApp{
+    border-radius: 10px;
+    background-color: whitesmoke;
+    margin-top: 5%;
+    width: 25%;
+    text-align: center;
+}
+
+.searchBar{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+.btn{
+    width: 100%;
+    margin-top: 2%;
+}
+
+h2{
+    font-family: cursive;
+    font-size: 350%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.resetBtn{
+    width: 25%;
+    margin-bottom: 5%;
+}
+
+.temps{
+    font-size: 150%;
+}

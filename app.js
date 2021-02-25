@@ -18,7 +18,15 @@ function fetchData() {
         var feels_like = Math.round((data.main.feels_like - 273.15) * 9 / 5 + 32);
         var humidity = data.main.humidity;
 
+        let unix_timestamp = data.dt;
+        var date = new Date(unix_timestamp * 1000);
+        var hours = date.getHours();
+        var minutes = "0" + date.getMinutes();
+        var seconds = "0" + date.getSeconds();
+
         $('#reset').html(`<h2><strong>${selectedCity.toUpperCase()}</strong></h2>`);
+        $('#reset').append(`<p class="time" >${date}</p>`);
+        $('#reset').append(`<p class="time" >${hours} : ${minutes.substr(-2)} : ${seconds.substr(-2)} </p>`);
         $('#reset').append(`<p class="temps" >Weather: ${data.weather[0].main} </p>`);
         $('#reset').append(`<p class="temps" >Description: ${data.weather[0].description}</p>`);
         $('#reset').append(`<p class="temps" >Current Temp: ${temp} ℉</p>`);
